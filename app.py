@@ -5,17 +5,10 @@ import config
 # Random verse API
 text_message = requests.get(config.verse_of_the_day_url)
 
-# Twilio ClientAPI
+# Twilio Client
 client = Client(config.account_sid, config.auth_token)
-
-# Number of account_sid = "AC36c6c1e78ec3a9a1e7d6847f22a6ab75"
-auth_token = "e72553910f757160d13e1e9d559a0df8"
-sender_number = "+19545046250"
-
-
-verse_of_the_day_url = "http://www.ourmanna.com/verses/api/get?format=text&order=random"
-
-receivers_number = "+27812896956"
+# The nu
+receivers_number = ["+27812896956", "+13322014056"]
 
 
 def send_message(receivers_number):
